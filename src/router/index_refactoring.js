@@ -10,41 +10,41 @@ Vue.use(VueRouter);
 export const routesName = {
   login: "login",
   home: "home",
-  join: "join"
+  join: "join",
 };
 
 const routes = [
   {
     path: "/",
     name: routesName.home,
-    component: Home
+    component: Home,
   },
   {
     path: "/home",
     name: routesName.home,
-    component: Home
+    component: Home,
   },
   {
     path: "/login",
     name: routesName.login,
-    component: Login
+    component: Login,
   },
   {
     path: "/join",
     name: routesName.join,
-    component: Join
+    component: Join,
   },
   {
     path: "*",
     name: "notFound",
-    redirect: { name: "home" }
-  }
+    redirect: { name: "home" },
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
-  base: process.env.BASE_URL,
-  routes
+  base: process.env.VITE_BASE_URL,
+  routes,
 });
 
 export default router;

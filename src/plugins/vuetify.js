@@ -1,17 +1,12 @@
-import Vue from "vue";
-import Vuetify from "vuetify/lib";
 import theme from "./theme";
 import "@fortawesome/fontawesome-free/css/all.css";
 
-Vue.use(Vuetify);
+import "vuetify/styles";
+import { createVuetify } from "vuetify";
 
-Vue.use(Vuetify);
-
-const opts = {
+export default createVuetify({
   icons: {
-    iconfont: "fa"
+    iconfont: "fa",
   },
-  theme
-};
-
-export default new Vuetify(opts);
+  theme,
+});

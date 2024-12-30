@@ -14,10 +14,12 @@ export default {
   name: "App",
   computed: {
     ...mapGetters("common", {
-      fullScreen: "fullScreen"
-    })
-  }
+      fullScreen: "fullScreen",
+    }),
+  },
 };
+
+console.log(import.meta.env.VITE_VITE_BASE_URL); // "/"
 </script>
 
 <style lang="scss">
