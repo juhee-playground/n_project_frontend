@@ -2,121 +2,50 @@
   "name": "n_project_frontend",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "serve": "vue-cli-service serve --mode development",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
-    "build:dev": "vue-cli-service build --mode development --dist",
-    "build:prod": "vue-cli-service build --mode production --dist",
-    "build:storybook": "build-storybook",
-    "nohup": "nohup vue-cli-service serve --mode production &",
+    "lint": "eslint .",
+    "dev": "vite",
+    "serve": "vite preview",
+    "serve:prod": "vite preview",
     "prebuild": "rm -rf dist",
-    "serve:prod": "vue-cli-service serve --mode production",
-    "serve:storybook": "start-storybook -p 6006",
-    "start": "vue-cli-service serve",
-    "storybook:build": "vue-cli-service storybook:build -c config/storybook",
-    "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook"
+    "build": "vite build",
+    "build:dev": "vite build --mode development",
+    "build:prod": "vite build --mode production",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.2",
-    "axios": "^0.28.0",
-    "core-js": "^3.4.4",
-    "d3": "^5.16.0",
-    "jwt-decode": "^2.2.0",
-    "lodash": "^4.17.21",
-    "moment": "^2.24.0",
-    "register-service-worker": "^1.6.2",
-    "roboto-fontface": "*",
-    "vue": "^2.6.11",
-    "vue-cli-plugin-s3-deploy": "^4.0.0-rc3",
-    "vue-cookies": "^1.1.4",
-    "vue-router": "^3.1.3",
-    "vue-server-renderer": "^2.6.14",
-    "vuetify": "^2.5.6",
-    "vuex": "^3.1.2",
-    "vuex-mock-store": "0.0.8",
-    "vuex-router-sync": "^5.0.0"
+    "@vitejs/plugin-vue": "^6.0.10",
+    "axios": "^1.20.0",
+    "jwt-decode": "^4.0.0",
+    "lodash": "^4.18.1",
+    "moment": "^2.31.0",
+    "vite": "^8.3.4",
+    "vue": "^3.5.44",
+    "vue-cookies": "^1.8.6",
+    "vue-router": "^5.4.0",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.6.3",
-    "@mdi/font": "^4.5.95",
-    "@storybook/addon-essentials": "^6.0.26",
-    "@storybook/addon-links": "^6.0.26",
-    "@storybook/vue": "^6.3.4",
-    "@vue/cli-plugin-babel": "^4.1.0",
-    "@vue/cli-plugin-eslint": "^4.1.0",
-    "@vue/cli-plugin-pwa": "^4.1.0",
-    "@vue/cli-plugin-unit-jest": "^4.1.0",
-    "@vue/cli-service": "^4.4.4",
-    "@vue/eslint-config-prettier": "^5.0.0",
-    "@vue/test-utils": "1.0.0-beta.29",
-    "babel-eslint": "^10.0.3",
-    "babel-preset-vue": "^2.0.2",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^6.10.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-vue": "^5.0.0",
-    "jest-serializer-vue": "^2.0.2",
-    "js-beautify": "^1.11.0",
-    "node-sass": "^7.0.0",
-    "prettier": "^1.19.1",
-    "prism-react-renderer": "^0.1.7",
-    "prismjs": "^1.17.1",
-    "sass": "^1.19.0",
-    "sass-loader": "^8.0.0",
-    "vue-cli-plugin-storybook": "~2.1.0",
-    "vue-cli-plugin-vuetify": "^2.0.3",
-    "vue-cli-plugin-vuetify-storybook": "~0.2.1",
-    "vue-jest": "^3.0.5",
-    "vue-storybook": "^1.1.0",
-    "vue-template-compiler": "^2.6.10",
-    "vuetify-loader": "^1.5.0",
-    "yarn-audit-fix": "^10.0.7"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/recommended",
-      "prettier/vue"
-    ],
-    "rules": {
-      "no-console": "off",
-      "no-unused-vars": "off"
-    },
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "overrides": [
-      {
-        "files": [
-          "**/__tests__/*.{j,t}s?(x)",
-          "**/tests/unit/**/*.spec.{j,t}s?(x)"
-        ],
-        "env": {
-          "jest": true
-        }
-      }
-    ]
+    "@eslint/js": "^10.0.1",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "eslint": "^10.12.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.7",
+    "eslint-plugin-vue": "^10.11.1",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.10",
+    "sass": "^1.105.2",
+    "vite-plugin-vuetify": "^2.1.3",
+    "vuetify": "3.7.6"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions"
   ],
-  "jest": {
-    "preset": "@vue/cli-plugin-unit-jest",
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "vue"
-    ],
-    "transform": {
-      ".*\\.(vue)$": "vue-jest"
-    },
-    "snapshotSerializers": [
-      "<rootDir>/node_modules/jest-serializer-vue"
-    ]
-  }
+  "main": "index.js",
+  "repository": "https://github.com/JUHEEBAEK/n_project_frontrend",
+  "author": "JUHEEBAEK <bjh9287@naver.com>",
+  "license": "MIT",
+  "packageManager": "pnpm@8.6.2"
 }

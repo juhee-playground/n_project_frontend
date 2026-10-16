@@ -52,39 +52,39 @@ const routes = [
     path: "/",
     name: "home",
     component: Home,
-    beforeEnter: requireAuth()
+    beforeEnter: requireAuth(),
   },
   {
     path: "/login",
     name: "login",
-    component: Login
+    component: Login,
   },
   {
     path: "/join",
     name: "join",
-    component: Join
+    component: Join,
   },
   // footer view
   {
     path: "/member",
     component: Member,
-    beforeEnter: requireAuth()
+    beforeEnter: requireAuth(),
   },
   {
     path: "/gameReport",
     name: "gameReport",
-    component: GameReport
+    component: GameReport,
   },
   {
     path: "/gameReport/:schedule_id/details/:game_id",
     name: "gameDetails",
     component: GameReportDetail,
-    props: true
+    props: true,
   },
   {
     path: "/leagueReport",
     name: "leagueReport",
-    component: LeagueReport
+    component: LeagueReport,
   },
   // {
   //   path: "/squadView",
@@ -95,114 +95,113 @@ const routes = [
     path: "/member/details/:member_id",
     name: "memberDetails",
     component: Me,
-    props: true
+    props: true,
   },
   {
     path: "/ranking",
     name: "ranking",
-    component: Ranking
+    component: Ranking,
   },
   // navigation view
   {
     path: "/team-admin",
-    component: TeamAdmin
+    component: TeamAdmin,
   },
   {
     path: "/teamAdd",
     name: "teamAdd",
-    component: TeamAdd
+    component: TeamAdd,
   },
   {
     name: "teamDetails",
     path: "/team/:teamId",
     component: TeamDetails,
-    props: true
+    props: true,
   },
   {
     name: "unitTeamDetails",
     path: "/unitTeam/:teamId",
     component: UnitTeamDetails,
-    props: true
+    props: true,
   },
   {
     path: "/member-admin",
-    component: MemberAdmin
+    component: MemberAdmin,
   },
   {
     path: "/attend",
     name: "attend",
-    component: Attend
+    component: Attend,
   },
   {
     name: "memberUpdatePage",
     path: "/member/:memberId",
     component: Profile,
-    props: true
+    props: true,
   },
   {
     path: "/memberAdd",
     name: "memberAdd",
-    component: MemberAdd
+    component: MemberAdd,
   },
   {
     path: "/calendar",
     name: "calendar",
-    component: Calendar
+    component: Calendar,
   },
   {
     path: "/squad",
     name: "squadInput",
-    component: Squad
+    component: Squad,
   },
   {
     path: "/matchPrepare/schedule/:schedule_id/quarter/:quarter",
     name: "matchPrepare",
     component: MatchPrepare,
-    props: true
+    props: true,
   },
   {
     path: "/matchPrepare",
     name: "matchPrepareBasic",
-    component: MatchPrepare
+    component: MatchPrepare,
   },
   {
     path: "/matchInput/schedule/:schedule_id/quarter/:quarter",
     name: "matchInput",
     component: MatchInput,
-    props: true
+    props: true,
   },
   {
     path: "/stadium",
     name: "stadium",
-    component: Stadium
+    component: Stadium,
   },
   {
     path: "/StadiumAdd",
     name: "stadiumAdd",
-    component: StadiumAdd
+    component: StadiumAdd,
   },
   {
     name: "stadiumUpdate",
     path: "/stadium/:stadiumId",
     component: StadiumUpdate,
-    props: true
+    props: true,
   },
   {
     path: "*",
     name: "notFound",
-    component: NotFound
+    component: NotFound,
   },
   {
     path: "/training",
     name: "training",
-    component: Training
-  }
+    component: Training,
+  },
 ];
 
 const router = new Router({
   mode: "history",
-  base: process.env.BASE_URL,
-  routes
+  base: "/",
+  routes,
 });
-
 export default router;

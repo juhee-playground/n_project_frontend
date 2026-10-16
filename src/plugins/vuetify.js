@@ -1,17 +1,23 @@
-import Vue from "vue";
-import Vuetify from "vuetify/lib";
-import theme from "./theme";
-import "@fortawesome/fontawesome-free/css/all.css";
+// import theme from "./theme";
+// import "@fortawesome/fontawesome-free/css/all.css";
 
-Vue.use(Vuetify);
+// import "vuetify/styles";
+// import { createVuetify } from "vuetify";
 
-Vue.use(Vuetify);
+// export default createVuetify({
+//   icons: {
+//     iconfont: "fa",
+//   },
+//   theme,
+// });
 
-const opts = {
-  icons: {
-    iconfont: "fa"
-  },
-  theme
-};
+import { createVuetify } from "vuetify";
+import "vuetify/styles";
 
-export default new Vuetify(opts);
+// export default createVuetify({
+//   theme: {
+//     defaultTheme: "light",
+//   },
+// });
+
+export default createVuetify();
