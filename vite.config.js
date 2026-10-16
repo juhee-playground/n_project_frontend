@@ -24,8 +24,4 @@ export default defineConfig({
     open: true,
     hmr: false,
   },
-  test: {
-    globals: true,
-    environment: "jsdom",
-  },
 });

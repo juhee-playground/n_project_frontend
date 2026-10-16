@@ -49,14 +49,5 @@ export default [
       "arrow-parens": ["warn", "as-needed"],
       "prettier/prettier": ["warn", { endOfLine: "auto" }]
     }
-  },
-  {
-    files: ["**/__tests__/**/*.{js,ts}", "tests/unit/**/*.spec.{js,ts}"],
-    languageOptions: {
-      globals: {
-        ...globals.jest,
-        ...globals.vitest
-      }
-    }
   }
 ];
