@@ -1,16 +1,15 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vuetify from "vite-plugin-vuetify";
-
 import path from "path";
 
 export default defineConfig({
   base: "/",
   plugins: [
     vue(),
-    vuetify({
-      autoImport: { labs: true },
-    }),
+    // vuetify({
+    //   autoImport: { labs: true },
+    // }),
   ],
   resolve: {
     alias: {
@@ -23,7 +22,8 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    historyApiFallback: true,
+    open: true,
+    hmr: false,
   },
   test: {
     globals: true,

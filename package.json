@@ -7,116 +7,45 @@
     "lint": "eslint . --ext .js,.vue",
     "dev": "vite",
     "serve": "vite preview",
-    "serve:storybook": "start-storybook -p 6006",
     "serve:prod": "vite preview",
     "prebuild": "rm -rf dist",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "build:prod": "vite build --mode production",
-    "build:storybook": "build-storybook",
     "test:unit": "vitest",
-    "storybook:build": "storybook build -c config/storybook",
-    "storybook:serve": "storybook dev -p 6006 -c config/storybook",
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.2",
     "@vitejs/plugin-vue": "^5.2.1",
     "axios": "^0.28.0",
-    "core-js": "^3.4.4",
     "d3": "^5.16.0",
     "jwt-decode": "^2.2.0",
     "lodash": "^4.17.21",
     "moment": "^2.24.0",
-    "register-service-worker": "^1.6.2",
-    "roboto-fontface": "^0.4.1",
     "vite": "^6.0.6",
     "vue": "^3.5.13",
     "vue-cookies": "^1.1.4",
     "vue-router": "^4.5.0",
-    "vue-server-renderer": "^2.7.16",
-    "vuex": "^4.1.0",
-    "vuex-mock-store": "0.1.0",
-    "vuex-router-sync": "^5.0.0"
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
-    "@babel/preset-react": "^7.6.3",
-    "@mdi/font": "^4.5.95",
-    "@storybook/addon-essentials": "^8.4.7",
-    "@storybook/addon-links": "^8.4.7",
-    "@storybook/builder-vite": "^8.4.7",
-    "@storybook/vue": "^7.6.17",
     "@testing-library/vue": "^8.1.0",
     "@vue/eslint-config-prettier": "^5.0.0",
     "@vue/test-utils": "1.0.0-beta.29",
-    "babel-eslint": "^10.0.3",
-    "babel-preset-vue": "^2.0.2",
     "eslint": "^5.16.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^5.0.0",
-    "jest-serializer-vue": "^2.0.2",
-    "js-beautify": "^1.11.0",
     "prettier": "^1.19.1",
-    "prism-react-renderer": "^0.1.7",
-    "prismjs": "^1.17.1",
     "sass": "^1.83.0",
-    "sass-loader": "^8.0.0",
     "vite-plugin-vuetify": "^2.0.4",
     "vitest": "^2.1.8",
-    "vue-jest": "^3.0.5",
-    "vue-storybook": "^1.2.0",
-    "vue-template-compiler": "^2.6.10",
-    "vuetify": "3.7.6",
-    "vuetify-loader": "^1.5.0",
-    "yarn-audit-fix": "^10.0.7"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/recommended",
-      "prettier/vue"
-    ],
-    "rules": {
-      "no-console": "off",
-      "no-unused-vars": "off"
-    },
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
-    "overrides": [
-      {
-        "files": [
-          "**/__tests__/*.{j,t}s?(x)",
-          "**/tests/unit/**/*.spec.{j,t}s?(x)"
-        ],
-        "env": {
-          "jest": true
-        }
-      }
-    ]
+    "vuetify": "3.7.6"
   },
   "browserslist": [
     "> 1%",
     "last 2 versions"
   ],
-  "jest": {
-    "preset": "@vue/cli-plugin-unit-jest",
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "vue"
-    ],
-    "transform": {
-      ".*\\.(vue)$": "vue-jest"
-    },
-    "snapshotSerializers": [
-      "<rootDir>/node_modules/jest-serializer-vue"
-    ]
-  },
   "main": "index.js",
   "repository": "https://github.com/JUHEEBAEK/n_project_frontrend",
   "author": "JUHEEBAEK <bjh9287@naver.com>",

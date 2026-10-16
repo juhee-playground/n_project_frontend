@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <v-app id="app">
     <core-Toolbar v-if="!fullScreen"></core-Toolbar>
     <core-navigation v-if="!fullScreen"></core-navigation>
@@ -18,8 +18,6 @@ export default {
     }),
   },
 };
-
-console.log(import.meta.env.VITE_VITE_BASE_URL); // "/"
 </script>
 
 <style lang="scss">
@@ -31,5 +29,25 @@ console.log(import.meta.env.VITE_VITE_BASE_URL); // "/"
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+</style> -->
+
+<template>
+  <div>
+    <h1>Welcome to Vue 3!</h1>
+    <p>This is your first app with Vue 3 and Vite.</p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "App",
+};
+</script>
+
+<style>
+h1 {
+  color: #42b983;
+  text-align: center;
 }
 </style>
