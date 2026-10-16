@@ -13,8 +13,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-      "roboto-fontface": "/node_modules/roboto-fontface",
+      "@": path.resolve(import.meta.dirname, "./src"),
     },
   },
   build: {
